@@ -9,7 +9,6 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Progress } from "@/components/ui/progress";
 import {
   BarChart,
   Bar,
@@ -20,9 +19,6 @@ import {
   ResponsiveContainer,
   LineChart,
   Line,
-  PieChart,
-  Pie,
-  Cell,
 } from "recharts";
 import {
   videoEngagementData,
@@ -34,7 +30,6 @@ import {
   formatTime,
 } from "@/lib/analytics-data";
 import VideoGallery from "./video-gallery";
-import SimpleVideoGallery from "./simple-video-gallery";
 import {
   Zap,
   TrendingUp,
@@ -47,13 +42,10 @@ import {
   Play,
   MapPin,
   Hash,
-  TrendingDown,
   Globe,
   Target,
   BarChart3,
 } from "lucide-react";
-
-const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "#8884D8"];
 
 export default function AnalyticsDashboard() {
   return (
@@ -544,7 +536,7 @@ export default function AnalyticsDashboard() {
               </CardDescription>
             </CardHeader>
             <CardContent className="p-8 space-y-8">
-              {userInteractionFunnel.map((stage, index) => (
+              {userInteractionFunnel.map((stage) => (
                 <div key={stage.stage} className="space-y-4">
                   <div className="flex justify-between items-center">
                     <span className="font-bold text-white text-xl">

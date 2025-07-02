@@ -193,7 +193,7 @@ export const postingTimePerformance: PostingTimePerformance[] = [
     averageViews: 11200,
     averageLikes: 784,
     averageShares: 302,
-    comments: 181,
+    averageComments: 181,
   },
 ];
 
